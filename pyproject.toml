@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prediction-diff"
+version = "0.1.0"
+description = "按样本编号比较两版分类预测"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["mlxtend>=0.23", "numpy"]
+
+[project.scripts]
+prediction-diff = "prediction_diff.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
